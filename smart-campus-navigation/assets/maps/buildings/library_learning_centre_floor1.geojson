@@ -1,0 +1,86 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Library Learning Centre - Floor 1 Boundary",
+        "description": "Library floor footprint",
+        "level": 1,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.07500, 26.36570],
+            [86.07518, 26.36570],
+            [86.07518, 26.36592],
+            [86.07500, 26.36592],
+            [86.07500, 26.36570]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Library Entrance",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["library_corridor"],
+        "node_type": "entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07504, 26.36573]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "library_corridor",
+        "name": "Library Corridor",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["entrance", "room_issue_counter", "room_reading_hall"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07510, 26.36580]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_issue_counter",
+        "name": "Issue Counter",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["library_corridor"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07515, 26.36582]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_reading_hall",
+        "name": "Reading Hall",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["library_corridor"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07506, 26.36586]
+      }
+    }
+  ]
+}

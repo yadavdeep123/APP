@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Building A - Floor 1 Boundary",
+        "description": "Indoor footprint for Floor 1",
+        "level": 1,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.9876, 40.7484],
+            [-73.9875, 40.7485],
+            [-73.9874, 40.7484],
+            [-73.9875, 40.7483],
+            [-73.9876, 40.7484]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Main Entrance",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "node_type": "entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98757, 40.74836]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_f1_a",
+        "name": "Corridor Node A",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["entrance", "stairs_a_f1", "elevator_a_f1", "room_101"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98754, 40.74840]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_a_f1",
+        "name": "Staircase A",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "connector_id": "stairs_a",
+        "connector_type": "stairs",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98750, 40.74844]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_a_f1",
+        "name": "Elevator A",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "connector_id": "elevator_a",
+        "connector_type": "elevator",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98747, 40.74842]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_101",
+        "name": "Room 101",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98760, 40.74843]
+      }
+    }
+  ]
+}

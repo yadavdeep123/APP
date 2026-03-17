@@ -1,0 +1,86 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sports Complex - Floor 1 Boundary",
+        "description": "Sports complex indoor map",
+        "level": 1,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.07529, 26.36520],
+            [86.07552, 26.36520],
+            [86.07552, 26.36542],
+            [86.07529, 26.36542],
+            [86.07529, 26.36520]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Sports Entrance",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["sports_corridor"],
+        "node_type": "entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07532, 26.36523]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sports_corridor",
+        "name": "Sports Corridor",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["entrance", "room_gym", "room_indoor_hall"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07540, 26.36530]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_gym",
+        "name": "Gym Zone",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["sports_corridor"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07534, 26.36536]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_indoor_hall",
+        "name": "Indoor Games Hall",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["sports_corridor"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07546, 26.36536]
+      }
+    }
+  ]
+}

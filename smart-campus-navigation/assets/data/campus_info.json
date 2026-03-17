@@ -1,0 +1,131 @@
+{
+  "campus_name": "Sandip University Madhubani Campus",
+  "campus_location": {
+    "address": "Madhubani, Bihar, India",
+    "latitude": 26.3659,
+    "longitude": 86.0749
+  },
+  "buildings": [
+    {
+      "name": "Central Academic Block",
+      "description": "Main teaching block with lecture halls, classrooms, and faculty cabins.",
+      "coordinates": {
+        "latitude": 26.3661,
+        "longitude": 86.0747
+      },
+        "imageUrl": "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=600&q=80",
+      "floors": [
+        {
+          "floor_number": 1,
+          "description": "Ground floor with reception and core classrooms."
+        },
+        {
+          "floor_number": 2,
+          "description": "Upper floor with labs and seminar rooms."
+        }
+      ]
+    },
+    {
+      "name": "Administration Block",
+      "description": "Admissions, accounts, examination, and registrar offices.",
+      "coordinates": {
+        "latitude": 26.3657,
+        "longitude": 86.0744
+      },
+        "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+      "floors": [
+        {
+          "floor_number": 1,
+          "description": "Administrative offices and support desks."
+        }
+      ]
+    },
+    {
+      "name": "Engineering Block",
+      "description": "Department classrooms and practical labs for engineering programs.",
+      "coordinates": {
+        "latitude": 26.3663,
+        "longitude": 86.0753
+      },
+        "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+      "floors": [
+        {
+          "floor_number": 1,
+          "description": "Workshop and first-year labs."
+        },
+        {
+          "floor_number": 2,
+          "description": "Department classrooms and project rooms."
+        }
+      ]
+    },
+    {
+      "name": "Library Learning Centre",
+      "description": "Library, reading hall, and digital learning rooms.",
+      "coordinates": {
+        "latitude": 26.3658,
+        "longitude": 86.0751
+      },
+        "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80",
+      "floors": [
+        {
+          "floor_number": 1,
+          "description": "Book stacks, issue counter, and reading spaces."
+        }
+      ]
+    },
+    {
+      "name": "Sports Complex",
+      "description": "Indoor games hall, gym area, and sports administration rooms.",
+      "coordinates": {
+        "latitude": 26.3653,
+        "longitude": 86.0754
+      },
+        "imageUrl": "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=600&q=80",
+      "floors": [
+        {
+          "floor_number": 1,
+          "description": "Indoor sports facilities and support rooms."
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "name": "Main Gate",
+      "description": "Primary entrance gate of Sandip University Madhubani campus.",
+      "coordinates": {
+        "latitude": 26.3652,
+        "longitude": 86.0742
+      }
+    },
+    {
+      "name": "Central Lawn",
+      "description": "Open lawn used for student activities and events.",
+      "coordinates": {
+        "latitude": 26.3659,
+        "longitude": 86.07495
+      }
+    },
+    {
+      "name": "Hostel Shuttle Point",
+      "description": "Pickup and drop point for university shuttle vehicles.",
+      "coordinates": {
+        "latitude": 26.36545,
+        "longitude": 86.07565
+      }
+    }
+  ],
+  "transportation": {
+    "bus_routes": [
+      {
+        "route_name": "Campus Internal Loop",
+        "description": "Connects main gate, academic blocks, library, and sports complex."
+      },
+      {
+        "route_name": "City-Madhubani Connector",
+        "description": "Connects university campus with key city pickup points."
+      }
+    ]
+  }
+}

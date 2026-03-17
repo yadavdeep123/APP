@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>Smart Campus Navigation</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.smartcampusnavigation</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <!-- Mapbox access token -->
+    <key>MBXAccessToken</key>
+    <string>YOUR_MAPBOX_PUBLIC_TOKEN</string>
+
+    <!-- Location permissions -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Smart Campus Navigation needs your location to show your position on the map and guide you to your destination.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Smart Campus Navigation needs background location to continue turn-by-turn guidance when the screen is off.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Smart Campus Navigation needs your location to provide navigation services even in the background.</string>
+
+    <!-- Camera (QR code scanning) -->
+    <key>NSCameraUsageDescription</key>
+    <string>Smart Campus Navigation uses the camera to scan QR codes placed at campus landmarks.</string>
+
+    <!-- Photo library -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Smart Campus Navigation may save map snapshots to your photo library.</string>
+
+    <!-- Maps SDK background modes -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
+</dict>
+</plist>

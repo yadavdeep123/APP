@@ -1,0 +1,205 @@
+Great progress so far. Here is the clear breakdown.
+
+Total Phases
+I recommend 8 total phases for a complete college-level Smart Campus Navigation system.
+
+Phase 1: Project Foundation
+Phase 2: Outdoor Navigation MVP
+Phase 3: Indoor Mapping + Floor Navigation
+Phase 4: Landmark-first UX
+Phase 5: Offline + Reliability
+Phase 6: Testing + QA
+Phase 7: Pilot Deployment on Campus
+Phase 8: Production Hardening + Analytics
+What is already done
+Most of Phase 1 and a good chunk of Phase 2 scaffolding is done.
+
+Completed:
+App architecture and routing
+State management setup (Riverpod)
+Core services/repositories/use-cases
+Android/iOS permission and Mapbox token integration points
+UI shells for splash, onboarding, home, map, search, navigation
+Indoor/outdoor data structures
+Build runner codegen setup
+Initial tests (all currently passing in your workspace run)
+Key files:
+
+main.dart
+app.dart
+mapbox_service.dart
+indoor_navigation_service.dart
+campus_outdoor.geojson
+building_a_floor1.geojson
+What remains by phase
+
+Phase 2 remaining:
+Real outdoor route rendering from your real campus points
+Better map markers and route styling
+Real search index from campus data
+Phase 3:
+Real indoor floor plan conversion
+Node-edge graph completion per floor
+Floor transition logic (stairs/lifts)
+Phase 4:
+Strong UX for first-time students and visitors
+Landmark cards, nearest landmark suggestions
+Phase 5:
+Offline mode + cached assets + fallback behavior
+Phase 6:
+Integration tests with realistic campus scenarios
+Phase 7 and 8:
+Pilot with real students
+Performance tuning and bug fixes
+How to add your real college map
+Use this exact workflow.
+
+Collect real geospatial data
+Campus boundary polygon
+Building footprints
+Entrances/exits
+Landmarks (library, admin block, hostels, canteen, etc.)
+Floor-wise indoor plans (if available in CAD/PDF)
+Convert to GeoJSON
+Use QGIS (best free tool) to georeference and export
+Keep coordinate system as WGS84 (EPSG:4326, lat/lng)
+Prepare outdoor file
+Replace content in:
+campus_outdoor.geojson
+Include features with properties like:
+name
+type (building, landmark, gate, parking)
+description
+Prepare indoor floor files
+Create one GeoJSON per floor:
+building_a_floor1.geojson
+same pattern for all buildings/floors
+For indoor routing in your current service design, include navigation nodes:
+nav_node: true
+id: unique node id
+nav_edges: [connected_node_id_1, connected_node_id_2]
+Update campus metadata
+Put real building and landmark metadata in:
+campus_info.json
+landmarks.json
+Wire Mapbox tokens
+Public token in app constant and platform files
+Then run:
+flutter pub get
+flutter run
+Mapbox free-tier strategy for college project
+Yes, you can usually do this on free tier if usage is controlled.
+
+Cost-safe plan
+
+Use Mapbox only for base map + optional directions
+Keep your campus geometry local in assets (GeoJSON), not heavy cloud tiles
+Limit directions API calls:
+Only call when user taps Start Navigation
+Do not call on every keystroke
+Use one style only (avoid many style loads)
+Cache frequently used route results locally
+Restrict token scopes and domain/app usage in Mapbox dashboard
+Where billing can increase
+
+High map loads (many active users)
+Frequent Directions API calls
+Frequent Geocoding API calls
+College project tip
+
+For demo and moderate campus testing, free tier is often enough.
+Track usage weekly in Mapbox dashboard and set billing alerts immediately.
+Recommended practical phase plan for your project submission
+Phase A (1 week): Real outdoor campus map + landmark search
+Phase B (1 week): Outdoor routing from current location to landmark
+Phase C (1-2 weeks): Indoor one-building prototype (2 floors)
+Phase D (1 week): Final demo polish, test evidence, documentation
+If you want, next I can give you a strict implementation checklist for Phase A with exact data format templates for your college campus files.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Research findings are clear: the key constraints to design for are request limits, attribution/telemetry compliance, and minimizing Directions calls; next I’m auditing your current services to implement caching + token/env flexibility + offline-safe behavior.
+
+I’m now implementing Phase-2/5 foundation upgrades directly in code: secure runtime token config, route-request optimization (cache + throttling), and offline-safe campus data loading so your app scales on free tier and stays robust.
+
+I’ve finished the first optimized implementation block: secure token runtime config, route-call throttling + cache, and offline fallback for campus JSON. Next I’ll run error checks/tests, then I’ll give you a phase-by-phase research-backed implementation roadmap from this upgraded baseline.
+
+Checked workspace, no problems found
+
+13/13 tests passed (100%)
+
+13/13 tests passed (100%)
+
+Research + implementation has started for the remaining phases, and I’ve already pushed an optimization-focused upgrade to your codebase.
+
+What I researched (market-grade guidance)
+
+Mapbox Directions API limits and behavior:
+Walking profile is correct for campus navigation.
+Up to 25 coordinates per request.
+Documented request-rate cap is 300 requests/minute.
+Each route request is billable, so reduce duplicate calls aggressively.
+Mapbox Flutter SDK conditions:
+Keep attribution/wordmark visible.
+Support telemetry opt-out path (via attribution control or your own UI if hidden).
+Cost control direction for student/free-tier projects:
+Use local GeoJSON for campus layers.
+Call Directions only on user intent (tap Navigate), not on every input keystroke.
+Cache route responses with TTL and stale fallback.
+Throttle burst traffic from repeated taps.
+What I implemented now (optimized + flexible)
+
+Runtime token configuration:
+Added compile-time env-based token via dart-define in app_constants.dart.
+Persistent cache boxes initialized:
+Added route + campus cache boxes in main.dart.
+Route API optimization for free tier:
+Added route-cache keying, TTL reads, stale fallback, and request throttling in mapbox_service.dart.
+Offline-safe data loading:
+Added JSON fallback to cached campus/landmark payloads in campus_repository.dart.
+Search/navigation hardening:
+Added minimum query guard to avoid noisy computation/calls in search_service.dart.
+Avoid duplicate route requests when same destination already active in search_screen.dart.
+Validation:
+Errors: clean.
+Tests: 13 passed, 0 failed.
+Total phases and where you are now
+
+Phase 1: Foundation and architecture
+Status: completed.
+Phase 2: Outdoor production-ready routing
+Status: in progress, strong base now implemented.
+Phase 3: Indoor graph routing for real buildings
+Status: base service exists; data pipeline and floor graph completion pending.
+Phase 4: Landmark-first UX and guidance quality
+Status: partial; needs richer POI cards and improved reroute UX.
+Phase 5: Offline/reliability hardening
+Status: started and partially completed (cache + fallback done).
+Phase 6: QA and device walk-testing
+Status: pending.
+Phase 7: Pilot rollout on campus
+Status: pending.
+Phase 8: Metrics + production hardening
+Status: pending.
+How to use your real college map next (practical implementation path)
+
+Replace campus outdoor GeoJSON with real geometry in campus_outdoor.geojson.
+Replace landmarks/buildings metadata:
+landmarks.json
+campus_info.json
+Keep GeoJSON coordinates in [lng, lat] order everywhere.
+For indoor routing, encode node/edge properties in floor files:
+nav_node: true
+id: unique node id
+nav_edges: connected node ids
+Add your token securely and run using dart-define:
+Mapbox free-tier usage strategy for your college project
+
+Restrict token scopes and set URL/app restrictions in Mapbox dashboard.
+Keep only one default style active.
+Route only on explicit user action.
+Use cache-first behavior (already implemented).
+Add dashboard usage alerts before demo/pilot day.
+Keep campus data local in assets to avoid extra API use.
+If you want, I’ll now continue implementation for Phase 3 directly by adding a real indoor schema parser and multi-floor transition routing (stairs/lift connectors) in the current codebase.

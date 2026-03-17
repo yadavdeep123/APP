@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Academic Block - Floor 2 Boundary",
+        "description": "Upper floor footprint",
+        "level": 2,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.07462, 26.36602],
+            [86.07484, 26.36602],
+            [86.07484, 26.36620],
+            [86.07462, 26.36620],
+            [86.07462, 26.36602]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_a_f2",
+        "name": "Staircase A",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "connector_id": "stairs_a",
+        "connector_type": "stairs",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07476, 26.36615]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_a_f2",
+        "name": "Lift A",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "connector_id": "elevator_a",
+        "connector_type": "elevator",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07479, 26.36612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_f2_a",
+        "name": "Corridor Node A",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["stairs_a_f2", "elevator_a_f2", "room_cab_201", "room_cab_202"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07472, 26.36610]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_cab_201",
+        "name": "Lab CAB-201",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07465, 26.36613]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_cab_202",
+        "name": "Seminar CAB-202",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07469, 26.36617]
+      }
+    }
+  ]
+}

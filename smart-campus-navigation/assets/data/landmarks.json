@@ -1,0 +1,88 @@
+{
+  "landmarks": [
+    {
+      "id": 1,
+      "name": "Main Entrance Gate",
+      "description": "Primary entry point for Sandip University Madhubani campus. Security cabin with 24-hour guard and visitor registration.",
+      "coordinates": {
+        "latitude": 26.3652,
+        "longitude": 86.0742
+      },
+      "type": "transport",
+      "imageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
+      "openingHours": "Open 24 hours"
+    },
+    {
+      "id": 2,
+      "name": "Central Cafeteria",
+      "description": "Food court with student dining, quick snacks, and beverages.",
+      "coordinates": {
+        "latitude": 26.36585,
+        "longitude": 86.07485
+      },
+      "type": "food",
+      "imageUrl": "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80",
+      "openingHours": "8:00 AM - 9:00 PM"
+    },
+    {
+      "id": 3,
+      "name": "Library Plaza",
+      "description": "Outdoor seating and reading zone near the library.",
+      "coordinates": {
+        "latitude": 26.36578,
+        "longitude": 86.07505
+      },
+      "type": "outdoor",
+      "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&q=80",
+      "openingHours": "Open all day"
+    },
+    {
+      "id": 4,
+      "name": "Medical Assistance Room",
+      "description": "Campus first-aid and emergency health support room.",
+      "coordinates": {
+        "latitude": 26.36566,
+        "longitude": 86.0746
+      },
+      "type": "emergency",
+      "imageUrl": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=600&q=80",
+      "openingHours": "9:00 AM - 5:00 PM (Emergency support available)"
+    },
+    {
+      "id": 5,
+      "name": "Indoor Sports Hall",
+      "description": "Badminton and table tennis facilities for students.",
+      "coordinates": {
+        "latitude": 26.36532,
+        "longitude": 86.07546
+      },
+      "type": "sports",
+      "imageUrl": "https://images.unsplash.com/photo-1568153135-e486240b7e23?w=600&q=80",
+      "openingHours": "6:00 AM - 10:00 PM"
+    },
+    {
+      "id": 6,
+      "name": "University Shuttle Stop",
+      "description": "Boarding point for city connector and hostel shuttle.",
+      "coordinates": {
+        "latitude": 26.36545,
+        "longitude": 86.07565
+      },
+      "type": "transport",
+      "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80",
+      "openingHours": "7:00 AM - 8:00 PM"
+    },
+    {
+      "id": 7,
+      "name": "CSE Block Entrance",
+      "description": "Main entry gate of Computer Science Department Block.",
+      "coordinates": {
+        "latitude": 26.366,
+        "longitude": 86.07518
+      },
+      "type": "building",
+      "imageUrl": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=600&q=80",
+      "openingHours": "9:00 AM - 6:00 PM"
+    }
+  ]
+}

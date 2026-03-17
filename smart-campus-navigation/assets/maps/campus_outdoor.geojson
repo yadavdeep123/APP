@@ -1,0 +1,109 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sandip University Campus Boundary",
+        "description": "Main mapped area of Sandip University Madhubani campus."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.0739, 26.3666],
+            [86.0762, 26.3666],
+            [86.0762, 26.3650],
+            [86.0739, 26.3650],
+            [86.0739, 26.3666]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Main Entrance Gate",
+        "description": "Primary access gate for all students and visitors."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.0742, 26.3652]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Academic Block",
+        "description": "Lecture halls and classrooms."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.0747, 26.3661]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Administration Block",
+        "description": "Admissions, accounts, and registrar office."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.0744, 26.3657]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engineering Block",
+        "description": "Engineering classrooms and labs."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.0753, 26.3663]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Library Learning Centre",
+        "description": "Library and learning resources."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.0751, 26.3658]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sports Complex",
+        "description": "Indoor sports and gym spaces."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.0754, 26.3653]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Main Parking",
+        "description": "General parking zone for students and staff."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.0740, 26.36535],
+            [86.07445, 26.36535],
+            [86.07445, 26.36508],
+            [86.0740, 26.36508],
+            [86.0740, 26.36535]
+          ]
+        ]
+      }
+    }
+  ]
+}

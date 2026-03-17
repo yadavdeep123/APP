@@ -1,0 +1,103 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engineering Block - Floor 1 Boundary",
+        "description": "Ground floor labs",
+        "level": 1,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.07520, 26.36619],
+            [86.07542, 26.36619],
+            [86.07542, 26.36640],
+            [86.07520, 26.36640],
+            [86.07520, 26.36619]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Engineering Entrance",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["eng_corridor_f1"],
+        "node_type": "entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07524, 26.36621]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "eng_corridor_f1",
+        "name": "Engineering Corridor",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["entrance", "stairs_eng_f1", "room_ew_101", "room_ew_102"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07530, 26.36628]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_eng_f1",
+        "name": "Engineering Stairs",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["eng_corridor_f1"],
+        "connector_id": "stairs_eng",
+        "connector_type": "stairs",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07536, 26.36633]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_ew_101",
+        "name": "Workshop EW-101",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["eng_corridor_f1"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07523, 26.36633]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_ew_102",
+        "name": "Lab EW-102",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["eng_corridor_f1"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07527, 26.36636]
+      }
+    }
+  ]
+}

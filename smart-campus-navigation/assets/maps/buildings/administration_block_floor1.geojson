@@ -1,0 +1,86 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Administration Block - Floor 1 Boundary",
+        "description": "Administrative offices floor",
+        "level": 1,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.07431, 26.36561],
+            [86.07449, 26.36561],
+            [86.07449, 26.36581],
+            [86.07431, 26.36581],
+            [86.07431, 26.36561]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Admin Entrance",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["admin_corridor"],
+        "node_type": "entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07434, 26.36563]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "admin_corridor",
+        "name": "Admin Corridor",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["entrance", "room_registrar", "room_accounts"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07440, 26.36570]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_registrar",
+        "name": "Registrar Office",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["admin_corridor"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07445, 26.36574]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_accounts",
+        "name": "Accounts Office",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["admin_corridor"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07436, 26.36576]
+      }
+    }
+  ]
+}

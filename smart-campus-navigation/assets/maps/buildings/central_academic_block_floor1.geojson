@@ -1,0 +1,120 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Academic Block - Floor 1 Boundary",
+        "description": "Ground floor footprint",
+        "level": 1,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [86.07462, 26.36602],
+            [86.07484, 26.36602],
+            [86.07484, 26.36620],
+            [86.07462, 26.36620],
+            [86.07462, 26.36602]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "entrance",
+        "name": "Main Entrance",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "node_type": "entrance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07466, 26.36604]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_f1_a",
+        "name": "Corridor Node A",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["entrance", "stairs_a_f1", "elevator_a_f1", "room_cab_101", "room_cab_102"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07472, 26.36610]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_a_f1",
+        "name": "Staircase A",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "connector_id": "stairs_a",
+        "connector_type": "stairs",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07476, 26.36615]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_a_f1",
+        "name": "Lift A",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "connector_id": "elevator_a",
+        "connector_type": "elevator",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07479, 26.36612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_cab_101",
+        "name": "Classroom CAB-101",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07464, 26.36613]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_cab_102",
+        "name": "Classroom CAB-102",
+        "level": 1,
+        "nav_node": true,
+        "nav_edges": ["corridor_f1_a"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [86.07468, 26.36617]
+      }
+    }
+  ]
+}

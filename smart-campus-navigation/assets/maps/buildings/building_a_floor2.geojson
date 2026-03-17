@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Building A - Floor 2 Boundary",
+        "description": "Indoor footprint for Floor 2",
+        "level": 2,
+        "kind": "boundary"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-73.9876, 40.7484],
+            [-73.9875, 40.7485],
+            [-73.9874, 40.7484],
+            [-73.9875, 40.7483],
+            [-73.9876, 40.7484]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "stairs_a_f2",
+        "name": "Staircase A",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "connector_id": "stairs_a",
+        "connector_type": "stairs",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98750, 40.74854]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "elevator_a_f2",
+        "name": "Elevator A",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "connector_id": "elevator_a",
+        "connector_type": "elevator",
+        "node_type": "connector"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98747, 40.74852]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "corridor_f2_a",
+        "name": "Corridor Node A",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["stairs_a_f2", "elevator_a_f2", "room_201"],
+        "node_type": "corridor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98754, 40.74850]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "room_201",
+        "name": "Room 201",
+        "level": 2,
+        "nav_node": true,
+        "nav_edges": ["corridor_f2_a"],
+        "node_type": "room"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.98760, 40.74853]
+      }
+    }
+  ]
+}
