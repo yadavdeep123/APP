@@ -9,7 +9,8 @@
   // Mapbox styles
   static const String styleStreets = 'mapbox://styles/mapbox/streets-v12';
   static const String styleLight = 'mapbox://styles/mapbox/light-v11';
-    static const String styleSatellite = 'mapbox://styles/mapbox/satellite-streets-v12';
+  static const String styleSatellite =
+      'mapbox://styles/mapbox/satellite-streets-v12';
 
   // Outdoor route layer identifiers
   static const String routeSource = 'route-source';

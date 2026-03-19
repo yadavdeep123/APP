@@ -42,12 +42,11 @@
   // Timeouts
   static const Duration httpTimeout = Duration(seconds: 10);
   static const Duration routeCacheTtl = Duration(hours: 24);
-  static const Duration minRouteRequestInterval =
-      Duration(milliseconds: 500);
+  static const Duration minRouteRequestInterval = Duration(milliseconds: 500);
 
-    // Google Places query defaults for campus matching.
-    static const int googlePlacesSearchRadiusMetres = 1800;
-    static const String googlePlacesNearbyBaseUrl =
+  // Google Places query defaults for campus matching.
+  static const int googlePlacesSearchRadiusMetres = 1800;
+  static const String googlePlacesNearbyBaseUrl =
       'https://maps.googleapis.com/maps/api/place/nearbysearch/json';
 
   // Navigation

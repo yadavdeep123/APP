@@ -31,7 +31,8 @@ void main() {
       expect(building.floors.first.floorNumber, 1);
     });
 
-    test('distance utility returns positive distance between two buildings', () {
+    test('distance utility returns positive distance between two buildings',
+        () {
       final metres = LocationUtils.distanceInMetres(
         40.123456,
         -75.123456,

@@ -82,8 +82,10 @@ void main() {
       expect(route, isNotNull);
       expect(route!.isIndoor, isTrue);
       expect(route.floorNumber, 2);
-      expect(route.steps.any((s) =>
-          s.maneuverType == 'stairs' || s.maneuverType == 'elevator'), isTrue);
+      expect(
+          route.steps.any((s) =>
+              s.maneuverType == 'stairs' || s.maneuverType == 'elevator'),
+          isTrue);
     });
 
     test('respects preferred connector type when available', () async {

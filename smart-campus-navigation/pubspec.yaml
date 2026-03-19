@@ -1,7 +1,7 @@
 name: smart_campus_navigation
 description: A Smart Campus Navigation App for indoor and outdoor navigation using local landmarks.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
